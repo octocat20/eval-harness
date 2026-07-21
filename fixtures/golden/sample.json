@@ -1,0 +1,27 @@
+[
+  {
+    "id": "q1",
+    "relevant": [
+      "doc-a",
+      "doc-b"
+    ],
+    "ranked": [
+      "doc-a",
+      "doc-c",
+      "doc-b",
+      "doc-d",
+      "doc-e"
+    ]
+  },
+  {
+    "id": "q2",
+    "relevant": [
+      "doc-x"
+    ],
+    "ranked": [
+      "doc-y",
+      "doc-x",
+      "doc-z"
+    ]
+  }
+]
