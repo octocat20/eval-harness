@@ -20,6 +20,18 @@ def recall_at_k(relevant: Sequence[str], ranked: Sequence[str], k: int) -> float
     return len(truth & top) / len(truth)
 
 
+def precision_at_k(relevant: Sequence[str], ranked: Sequence[str], k: int) -> float:
+    """Return the fraction of the top-k ranks that are relevant."""
+    if k <= 0:
+        raise ValueError("k must be positive")
+    top = ranked[:k]
+    if not top:
+        return 0.0
+    truth = _as_set(relevant)
+    hits = sum(1 for item in top if str(item) in truth)
+    return hits / len(top)
+
+
 def hit_rate(relevant: Sequence[str], ranked: Sequence[str], k: int) -> float:
     """Return 1.0 if any relevant item appears in the top-k ranks else 0.0."""
     if k <= 0:
