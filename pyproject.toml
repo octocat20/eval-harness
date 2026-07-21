@@ -13,6 +13,9 @@ dependencies = []
 [project.optional-dependencies]
 dev = ["pytest>=7.0"]
 
+[project.scripts]
+eval-harness = "eval_harness.cli:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 

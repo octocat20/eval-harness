@@ -43,3 +43,12 @@ print(format_report(results))
 - `src/eval_harness/` - metrics runner and reporting
 - `fixtures/golden/` - small golden datasets
 - `tests/` - pytest coverage for metrics and the runner
+## Regression gate
+
+Fail CI when aggregate quality drops below a threshold:
+
+```bash
+eval-harness --fixture fixtures/golden/sample.json --k 3 --min-recall 0.5 --min-precision 0.3 --min-hit-rate 0.5
+```
+
+The command exits non-zero when any configured minimum is not met.
