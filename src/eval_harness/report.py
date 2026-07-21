@@ -25,5 +25,4 @@ def format_report(results: Dict[str, Any]) -> str:
                 hit=case.get("hit_rate", 0.0),
             )
         )
-    return "
-".join(lines)
+    return "\n".join(lines)
