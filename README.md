@@ -35,6 +35,7 @@ print(format_report(results))
 ## Metrics
 
 - `recall_at_k` - fraction of relevant items recovered in the top-k ranks
+- `precision_at_k` - fraction of the top-k ranks that are relevant
 - `hit_rate` - whether at least one relevant item appears in the top-k ranks
 
 ## Layout
